@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0f2044;
+  --navy-light: #1e3a5f;
+  --navy-dark: #091628;
+  --cyan: #06b6d4;
+  --cyan-light: #22d3ee;
+  --cyan-dark: #0891b2;
+  --teal: #0d9488;
+  --surface: #f8fafc;
+  --surface-2: #f1f5f9;
+  --border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Devanagari font override */
+:lang(mr), :lang(hi),
+.devanagari, [data-lang="mr"], [data-lang="hi"] {
+  font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+}
+
+@layer components {
+  /* ── Buttons ────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm
+           bg-gradient-to-r from-cyan-500 to-cyan-600 
+           hover:from-cyan-400 hover:to-cyan-500
+           shadow-lg shadow-cyan-500/25
+           transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm
+           bg-white border border-slate-200 text-slate-700
+           hover:bg-slate-50 hover:border-slate-300
+           shadow-sm transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm
+           bg-gradient-to-r from-navy to-navy-light
+           hover:from-navy-light hover:to-navy
+           shadow-lg shadow-navy/30
+           transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm
+           text-slate-600 hover:bg-slate-100 hover:text-slate-900
+           transition-all duration-150;
+  }
+
+  /* ── Cards ─────────────────────────────────── */
+  .card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm 
+           hover:shadow-md transition-shadow duration-200;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-lg;
+  }
+
+  .card-gradient {
+    @apply rounded-2xl bg-gradient-to-br from-navy to-navy-light text-white shadow-xl;
+  }
+
+  /* ── Inputs ─────────────────────────────────── */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white
+           text-slate-900 text-sm placeholder:text-slate-400
+           focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-400
+           transition-all duration-150;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1.5;
+  }
+
+  /* ── Badges ─────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-cyan {
+    @apply badge bg-cyan-50 text-cyan-700 border border-cyan-100;
+  }
+
+  .badge-navy {
+    @apply badge bg-navy/10 text-navy border border-navy/20;
+  }
+
+  .badge-green {
+    @apply badge bg-emerald-50 text-emerald-700 border border-emerald-100;
+  }
+
+  .badge-amber {
+    @apply badge bg-amber-50 text-amber-700 border border-amber-100;
+  }
+
+  .badge-red {
+    @apply badge bg-red-50 text-red-700 border border-red-100;
+  }
+
+  /* ── Sidebar ────────────────────────────────── */
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium
+           text-slate-600 hover:bg-slate-50 hover:text-slate-900
+           transition-all duration-150 cursor-pointer;
+  }
+
+  .sidebar-item-active {
+    @apply sidebar-item bg-gradient-to-r from-cyan-50 to-blue-50 
+           text-cyan-700 border border-cyan-100/50;
+  }
+
+  /* ── Chat ───────────────────────────────────── */
+  .chat-bubble-user {
+    @apply max-w-[80%] ml-auto px-4 py-3 rounded-2xl rounded-tr-sm
+           bg-gradient-to-br from-cyan-500 to-cyan-600 text-white text-sm leading-relaxed;
+  }
+
+  .chat-bubble-ai {
+    @apply max-w-[85%] px-4 py-4 rounded-2xl rounded-tl-sm
+           bg-white border border-slate-100 shadow-sm text-sm leading-relaxed text-slate-800;
+  }
+
+  /* ── Stat Cards ─────────────────────────────── */
+  .stat-card {
+    @apply card p-5 flex items-center gap-4;
+  }
+
+  .stat-icon {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0;
+  }
+}
+
+/* ── Custom Scrollbar ────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ── Animations ──────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
+}
+
+@keyframes typing-dots {
+  0%, 20% { opacity: 0.2; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-3px); }
+  80%, 100% { opacity: 0.2; transform: translateY(0); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.4s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.3s ease-out forwards; }
+.animate-slide-in-right { animation: slideInRight 0.3s ease-out forwards; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+.typing-dot {
+  animation: typing-dots 1.2s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── Tailwind Custom Colors ──────────────────────── */
+.bg-navy { background-color: #0f2044; }
+.bg-navy-light { background-color: #1e3a5f; }
+.text-navy { color: #0f2044; }
+.text-navy-light { color: #1e3a5f; }
+.from-navy { --tw-gradient-from: #0f2044; }
+.to-navy { --tw-gradient-to: #0f2044; }
+.to-navy-light { --tw-gradient-to: #1e3a5f; }
+.border-navy { border-color: #0f2044; }
+
+/* ── Prose improvements for AI answers ─────────── */
+.ai-prose h1, .ai-prose h2, .ai-prose h3 {
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.ai-prose p { margin-bottom: 0.75rem; line-height: 1.7; }
+.ai-prose ul, .ai-prose ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.ai-prose li { margin-bottom: 0.25rem; line-height: 1.6; }
+.ai-prose strong { font-weight: 600; color: #0f2044; }
+.ai-prose code {
+  font-family: monospace;
+  background: #f1f5f9;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+/* ── Loading Skeleton ───────────────────────────── */
+.skeleton {
+  @apply bg-slate-200 rounded animate-pulse;
+}
+
+/* ── Gradient text ──────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-gold {
+  background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

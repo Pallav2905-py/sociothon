@@ -1,0 +1,252 @@
+"""
+EduBridge AI -- Generate sample educational PDF about Photosynthesis.
+Run from project root: python sample_data/generate_sample.py
+"""
+import os
+import sys
+
+PHOTOSYNTHESIS_CONTENT = """CHAPTER 6: PHOTOSYNTHESIS -- THE FOOD FACTORY OF PLANTS
+Class 7 Science | EduBridge AI Sample Chapter
+
+INTRODUCTION
+Every living organism on Earth needs energy to survive, grow, and carry out life
+functions. While animals get their energy by eating food, plants have a remarkable
+ability to make their own food using sunlight, water, and air. This process is
+called photosynthesis.
+
+The word "photosynthesis" comes from two Greek words:
+  - "Photo" meaning light
+  - "Synthesis" meaning to put together or to make
+So photosynthesis literally means "making something using light."
+
+WHAT IS PHOTOSYNTHESIS?
+Photosynthesis is the process by which green plants, algae, and some bacteria
+convert light energy into chemical energy stored in glucose (a type of sugar).
+
+The raw materials required for photosynthesis are:
+  1. Carbon dioxide (CO2) -- absorbed from air through tiny pores called stomata
+  2. Water (H2O) -- absorbed from the soil through the roots
+  3. Sunlight -- absorbed by chlorophyll in leaves
+
+The products of photosynthesis are:
+  1. Glucose (C6H12O6) -- a sugar used for energy and growth
+  2. Oxygen (O2) -- released into the air as a by-product
+
+The overall chemical equation for photosynthesis is:
+  6CO2 + 6H2O + Light Energy --> C6H12O6 + 6O2
+
+In simple words:
+  Carbon dioxide + Water + Sunlight --> Glucose + Oxygen
+
+THE ROLE OF CHLOROPHYLL
+The green colour of leaves is due to a special pigment called chlorophyll.
+Chlorophyll is found inside structures called chloroplasts, which are mainly
+present in the cells of leaves.
+
+Chlorophyll has a very important job -- it captures light energy from the sun.
+Without chlorophyll, plants cannot carry out photosynthesis.
+
+This is why:
+  - Most photosynthesis happens in leaves (which have the most chlorophyll)
+  - Leaves are usually flat and wide (to capture maximum sunlight)
+  - The upper surface of leaves is greener (has more chloroplasts)
+
+WHERE DOES PHOTOSYNTHESIS HAPPEN?
+Photosynthesis occurs mainly in the leaves of plants. The main site of
+photosynthesis inside the leaf cell is the chloroplast. Chloroplasts contain
+stacks of membrane structures called thylakoids, which contain chlorophyll.
+
+THE TWO STAGES OF PHOTOSYNTHESIS
+Photosynthesis occurs in two main stages:
+
+Stage 1 -- Light Reactions (Light-dependent reactions):
+  - These reactions require direct sunlight
+  - Happen in the thylakoid membranes
+  - Water molecules are broken down: 2H2O --> 4H+ + 4e- + O2
+  - The oxygen released here is what we breathe
+  - Energy from light is converted into chemical energy (ATP and NADPH)
+
+Stage 2 -- Calvin Cycle (Dark Reactions / Light-independent reactions):
+  - These reactions do NOT directly require sunlight
+  - Happen in the stroma (the fluid part of the chloroplast)
+  - Carbon dioxide is fixed (combined with hydrogen) to make glucose
+  - ATP and NADPH from Stage 1 are used here
+
+FACTORS AFFECTING THE RATE OF PHOTOSYNTHESIS
+The rate of photosynthesis can be affected by several factors:
+
+1. Light Intensity:
+   - More light = faster photosynthesis (up to a limit)
+   - At very high intensities, the rate levels off
+
+2. Carbon Dioxide Concentration:
+   - More CO2 = faster photosynthesis
+   - CO2 is a raw material, so more of it helps
+
+3. Temperature:
+   - Photosynthesis works best between 25 degrees C and 35 degrees C
+   - Very low or very high temperatures slow it down
+   - Enzymes involved in photosynthesis are temperature-sensitive
+
+4. Water Availability:
+   - Water is a raw material
+   - Shortage of water causes stomata to close (to prevent water loss)
+   - Closed stomata reduce CO2 entry, slowing photosynthesis
+
+5. Chlorophyll Content:
+   - More chlorophyll = more light absorbed = more photosynthesis
+
+WHY IS PHOTOSYNTHESIS IMPORTANT?
+Photosynthesis is one of the most important processes on Earth. Here is why:
+
+1. Primary Source of Food:
+   - Plants make glucose through photosynthesis
+   - This glucose becomes the primary food source for almost all living organisms
+   - Herbivores (plant-eaters) eat plants; carnivores eat herbivores
+   - Without photosynthesis, the food chain collapses
+
+2. Oxygen Production:
+   - The oxygen released during photosynthesis is what we breathe
+   - All aerobic organisms depend on this oxygen
+   - Before photosynthesis evolved, Earth's atmosphere had very little oxygen
+
+3. Carbon Dioxide Removal:
+   - Plants absorb CO2 from the atmosphere
+   - This helps regulate Earth's climate
+   - Deforestation increases CO2 levels, contributing to climate change
+
+4. Energy Storage:
+   - Photosynthesis converts solar energy into chemical energy
+   - This stored energy is the basis for all fossil fuels (coal, oil, natural gas)
+   - Coal is formed from ancient plants that stored energy through photosynthesis
+
+5. Foundation of Ecosystems:
+   - Plants are called "producers" because they produce food
+   - All ecosystems depend on producers to convert solar energy into food energy
+
+PHOTOSYNTHESIS VS. RESPIRATION
+Students often confuse photosynthesis with cellular respiration.
+
+Photosynthesis:
+  - Occurs in plants (with chlorophyll)
+  - Uses CO2 and water; Requires light
+  - Produces glucose and oxygen; Stores energy
+
+Cellular Respiration:
+  - Occurs in all living cells (plants, animals, bacteria)
+  - Uses glucose and oxygen; Does NOT require light
+  - Produces CO2, water, and energy; Releases energy
+
+SUMMARY -- KEY POINTS
+1. Photosynthesis is the process of making food using sunlight, CO2, and water.
+2. The equation is: 6CO2 + 6H2O + Light --> C6H12O6 + 6O2
+3. Chlorophyll in chloroplasts absorbs sunlight.
+4. Photosynthesis occurs mainly in leaves.
+5. The products are glucose (food) and oxygen.
+6. Factors affecting photosynthesis: light, CO2, temperature, water, chlorophyll.
+7. Photosynthesis is vital for food, oxygen, and climate balance on Earth.
+
+IMPORTANT TERMS
+- Photosynthesis: Making food from light
+- Chlorophyll: Green pigment that absorbs light
+- Chloroplast: Organelle where photosynthesis occurs
+- Stomata: Tiny pores in leaves for gas exchange
+- Glucose: Simple sugar produced by photosynthesis
+- Carbon dioxide (CO2): Gas absorbed from air
+- Oxygen (O2): Gas released as a by-product
+- Thylakoid: Membrane structure inside chloroplast
+- Stroma: Fluid in chloroplast where Calvin cycle occurs
+- ATP: Energy molecule produced in light reactions
+
+PRACTICE QUESTIONS
+1. What are the raw materials needed for photosynthesis?
+2. Write the chemical equation for photosynthesis.
+3. What is the role of chlorophyll in photosynthesis?
+4. Where exactly in the leaf cell does photosynthesis take place?
+5. What happens to the oxygen produced during photosynthesis?
+6. Name the two stages of photosynthesis and state where each occurs.
+7. List four factors that affect the rate of photosynthesis.
+8. Why are plants called "producers" in an ecosystem?
+9. How is photosynthesis different from cellular respiration?
+10. Why would a plant in a dark room eventually die?
+"""
+
+
+def create_sample_pdf():
+    output_dir = os.path.dirname(os.path.abspath(__file__))
+    pdf_path = os.path.join(output_dir, "photosynthesis_chapter.pdf")
+    txt_path = os.path.join(output_dir, "photosynthesis_chapter_content.txt")
+
+    # Always write the text file as fallback
+    with open(txt_path, "w", encoding="utf-8") as f:
+        f.write(PHOTOSYNTHESIS_CONTENT)
+    print(f"[OK] Text content saved: {txt_path}")
+
+    # Try fpdf2 with proper encoding handling
+    try:
+        from fpdf import FPDF, XPos, YPos
+
+        class SafePDF(FPDF):
+            pass
+
+        pdf = SafePDF()
+        pdf.set_auto_page_break(auto=True, margin=15)
+        pdf.add_page()
+
+        # Title
+        pdf.set_font("Helvetica", "B", 14)
+        pdf.cell(0, 10, "Chapter 6: Photosynthesis - The Food Factory of Plants",
+                 new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
+        pdf.set_font("Helvetica", "I", 10)
+        pdf.cell(0, 6, "Class 7 Science | EduBridge AI Sample Chapter",
+                 new_x=XPos.LMARGIN, new_y=YPos.NEXT, align="C")
+        pdf.ln(4)
+
+        pdf.set_font("Helvetica", "", 10)
+        for line in PHOTOSYNTHESIS_CONTENT.split("\n"):
+            # Skip the first 2 header lines (already added above)
+            if "CHAPTER 6:" in line or "Class 7 Science" in line:
+                continue
+            # Clean unicode chars that can't encode in latin-1
+            safe_line = (
+                line.replace("\u2014", "--")   # em dash
+                    .replace("\u2013", "-")    # en dash
+                    .replace("\u2018", "'")    # left single quote
+                    .replace("\u2019", "'")    # right single quote
+                    .replace("\u201c", '"')    # left double quote
+                    .replace("\u201d", '"')    # right double quote
+                    .replace("\u2192", "-->")  # right arrow
+                    .replace("\u2022", "-")    # bullet
+                    .replace("\u00b0", " degrees ")  # degree sign
+            )
+            if safe_line.strip().isupper() and len(safe_line.strip()) > 3:
+                pdf.set_font("Helvetica", "B", 11)
+                pdf.ln(3)
+                pdf.cell(0, 6, safe_line.strip(),
+                         new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+                pdf.set_font("Helvetica", "", 10)
+            else:
+                # Use multi_cell for word wrap
+                try:
+                    pdf.multi_cell(0, 5, safe_line)
+                except Exception:
+                    pass
+
+        pdf.output(pdf_path)
+        print(f"[OK] PDF created: {pdf_path}")
+        return pdf_path
+
+    except ImportError:
+        print("[WARN] fpdf2 not installed. Using text file only.")
+        print("       Install with: pip install fpdf2")
+        return txt_path
+    except Exception as e:
+        print(f"[WARN] PDF generation failed: {e}")
+        print(f"       Text file is available at: {txt_path}")
+        return txt_path
+
+
+if __name__ == "__main__":
+    path = create_sample_pdf()
+    print(f"\nSample document ready: {path}")
+    print("Upload this file via the Teacher Dashboard to start the demo.")
